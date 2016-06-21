@@ -3,12 +3,12 @@
 #vars
 timeStamp=`date +"%Y-%m-%d %H:%M"`
 scriptHome="/Users/admin/Scripts"
-zpoolName="Artie"
+zpoolName=""
 logPath="/Library/Logs/zpoolMonitor"
 logFile="$logPath/$zpoolName-Status.log"
 poolStatusFull=$(/usr/local/bin/zpool status "$zpoolName")
-pushoverToken="a4gVLJ8W9SaH5UgMkt2wLeeN7VcWmb"
-pushoverUser="uvdkMbYeh96B2pu5QMaRNtcgNvJUdb"
+pushoverToken=""
+pushoverUser=""
 
 #Logging setup
 if [ ! -d "$logPath" ]; then

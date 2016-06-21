@@ -3,12 +3,12 @@
 #vars
 timeStamp=`date +"%Y-%m-%d %H:%M"`
 scriptHome="/Users/admin/Scripts"
-zpoolName="Artie"
+zpoolName="" # name of the pool you're monitoring
 logPath="/Library/Logs/zpoolMonitor"
 logFile="$logPath/$zpoolName-Status.log"
 poolStatusFull=`zpool status "$zpoolName"`
-pushoverToken="a4gVLJ8W9SaH5UgMkt2wLeeN7VcWmb"
-pushoverUser="uvdkMbYeh96B2pu5QMaRNtcgNvJUdb"
+pushoverToken="" # poushover API key
+pushoverUser="" # pushover user key
 
 #Logging setup
 if [ ! -d "$logPath" ]; then
