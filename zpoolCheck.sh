@@ -2,13 +2,13 @@
 
 #vars
 timeStamp=`date +"%Y-%m-%d %H:%M"`
-scriptHome="/path/to/where/script/lives"
-zpoolName="name-of-zpool"
-logPath="/Library/Logs/ZFSmonitor"
+scriptHome="/Users/admin/Scripts"
+zpoolName="Artie"
+logPath="/Library/Logs/zpoolMonitor"
 logFile="$logPath/$zpoolName-Status.log"
 poolStatusFull=`zpool status "$zpoolName"`
-pushoverToken=""
-pushoverUser=""
+pushoverToken="a4gVLJ8W9SaH5UgMkt2wLeeN7VcWmb"
+pushoverUser="uvdkMbYeh96B2pu5QMaRNtcgNvJUdb"
 
 #Logging setup
 if [ ! -d "$logPath" ]; then
@@ -84,7 +84,7 @@ case "$poolStatus" in
 		fi
 		;;
 	* )
-		echo "$timeStamp - UNKNOWN error." >> "$logFile"
+		echo "$timeStamp - UNKNOWN error: $poolStatus" >> "$logFile"
 		;;
 esac
 
