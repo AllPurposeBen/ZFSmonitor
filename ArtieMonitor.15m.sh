@@ -103,6 +103,9 @@ case "$poolStatus" in
 			echo "$timeStamp - [NOTE] Existing notification was sent on $noteSentTime" >> "$logFile"
 		fi
 		;;
+	"")
+		exit 0
+		;;
 	* )
 		echo "$timeStamp - UNKNOWN error: $poolStatus" >> "$logFile"
 		color="|color=yellow"
